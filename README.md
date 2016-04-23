@@ -19,3 +19,9 @@
         包括"ip" , "timestamp" , "asn" , "city" , "continent" , "country" , "location" , "isp" , "names" , 
         "subdivisions" , "organization" , "aso" , "product" ,  "banner" , "device" , "extrainfo" , "hostname", 
         "os" , "port" ,  "service" , "version"。 
+
+_________________________________________________________________________________________________________________________________________
+V0.2更新说明：
+1.增加classify_web_results函数用来处理Web方式返回的数据，并添加keyword参数于classify_web_results , classify_hosts_results函数中，便于筛选结果；
+
+2.classify_web_results , classify_hosts_results函数中增加try-except语句，以增强容错能力。
