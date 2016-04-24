@@ -23,7 +23,8 @@
     classify_web_results(result , para = ['headers'] , keyword = "")：
         对来自get_search_result函数的Web数据进行筛选————直接显示(print)一份,供使用者阅读；以列表形式返回(return)一份,供poc等程序使用。
         参数说明如下：result为来自get_search_result的原始json数据；para为指定返回显示的的数据的key值，
-        包括"geoinfo" , "city" , "asn" , "location" , "continent" , "country" , "headers" , "webapp" , "title" , "site" , "server" , "plugin" , "language" , "keywords" , "ip" , "domains" , "description" , "db" , "check_time"。 
+        包括"geoinfo" , "city" , "asn" , "location" , "continent" , "country" , "headers" , "webapp" , "title" , "site" , 
+        "server" , "plugin" , "language" , "keywords" , "ip" , "domains" , "description" , "db" , "check_time"。 
 _______________________________________________________________________________________________________________________________________
 V0.2更新说明：
 1.增加classify_web_results函数用来处理Web方式返回的数据，并添加keyword参数于classify_web_results , classify_hosts_results函数中，便于筛选结果；
