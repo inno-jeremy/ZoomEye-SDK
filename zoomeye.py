@@ -108,7 +108,7 @@ def get_token(email , password):
         return result["access_token"]
 
 
-def remain_of_resources(token):
+def Remaining_resources(token):
     '''
     检查token的剩余可用的资源数。
     '''
