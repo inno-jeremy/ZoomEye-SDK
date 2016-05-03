@@ -5,7 +5,7 @@
     token = get_token("email" , "password")：
         通过给定的邮箱地址及密码获取token。如返回错误信息，则返回“error”，并在屏幕上打印错误信息。
     
-    remain_of_resources(token)：
+    remaining_resources(token)：
         通过给定的token查询对应token剩余的可查询资源数。
     
     result = get_search_results(token , dork , type , page)：
