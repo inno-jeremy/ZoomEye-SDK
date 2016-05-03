@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding:utf-8
 
-import requests
+import requests , re
 from json import loads , dumps
 
 base_url = "http://api.zoomeye.org"
@@ -34,7 +34,7 @@ def classify_hosts_results(result , para = ['banner'] , keyword = ""):
         print "Total pages:" , result["total"] / 10 + 1, "\n"
     for result_num in range(len(result["matches"])):    #获取总结果数。
         if keyword:    #如果zoomeye返回的结果中总有那么一两个结果不符合我们的需求，并且可以通过banner来识别它们，那么便可以在“keyword”中添加关键字，来选取符合自己需求的结果。
-            if not keyword in result["matches"][result_num]["portinfo"]["banner"]:
+            if not re.search(keyword , result["matches"][result_num]["portinfo"]["banner"]):
                 continue
         print "ip:" , result["matches"][result_num]["ip"] , "\n" , "port:" , result["matches"][result_num]["portinfo"]["port"]    #打印IP地址,端口。
         tmp_result_list.append(result["matches"][result_num]["ip"])    #将IP放入临时列表中。
@@ -72,7 +72,7 @@ def classify_web_results(result , para = ['headers'] , keyword = ""):
         print "Total pages:" , result["total"] / 10 + 1, "\n"
     for result_num in range(len(result["matches"])):    #获取总结果数。
         if keyword:    #如果zoomeye返回的结果中总有那么一两个结果不符合我们的需求，并且可以通过headers来识别它们，那么便可以在“keyword”中添加关键字，来选取符合自己需求的结果。
-            if not keyword in result["matches"][result_num]["headers"]:
+            if not re.search(keyword , result["matches"][result_num]["headers"]):
                 continue
         print "ip:" , result["matches"][result_num]["ip"]    #打印IP地址。
         tmp_result_list.append(result["matches"][result_num]["ip"])    #将IP放入临时列表中。
