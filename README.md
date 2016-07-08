@@ -16,13 +16,17 @@
     classify_hosts_results(result, para=['banner'], keyword="", show_print=True, show_return=True):
         对来自get_search_result函数的host数据进行筛选————直接显示(print)一份,供使用者阅读；以列表形式返回(return)一份,供poc等程序使用。
         参数说明如下：result为来自get_search_result的原始json数据；
-        para为指定返回显示的的数据的key值，包括"ip" , "timestamp" , "asn" , "city" , "continent" , "country" , "location" , "isp"                                             "names" , "subdivisions" , "organization" , "aso" , "product" ,  "banner" , "device" ,                                         "extrainfo" , "hostname", "os" , "port" ,  "service" , "version"；
+        para为指定返回显示的的数据的key值，包括"ip" , "timestamp" , "asn" , "city" , "continent" , "country" , "location" , "isp"     
+        "names" , "subdivisions" , "organization" , "aso" , "product" ,  "banner" , "device" ,                                        
+        "extrainfo" , "hostname", "os" , "port" ,  "service" , "version"；
         keyword参数用于精确筛选满足需求的结果。
 
     classify_web_results(result, para=['headers'], keyword="", show_print=True, show_return=True):
         对来自get_search_result函数的Web数据进行筛选————直接显示(print)一份,供使用者阅读；以列表形式返回(return)一份,供poc等程序使用。
         参数说明如下：result为来自get_search_result的原始json数据；
-        para为指定返回显示的的数据的key值，包括"geoinfo" , "city" , "asn" , "location" , "continent" , "country" , "headers" ,                                               "webapp" , "title" , "site" , "server" , "plugin" , "language" , "keywords" , "ip" ,                                          "domains" ,"description" , "db" , "check_time"； 
+        para为指定返回显示的的数据的key值，包括"geoinfo" , "city" , "asn" , "location" , "continent" , "country" , "headers" ,
+        "webapp" , "title" , "site" , "server" , "plugin" , "language" , "keywords" , "ip" ,  "domains" ,"description" , "db" ,
+        "check_time"； 
         keyword参数用于精确筛选满足需求的结果。
 ______________________________________________________________________________________________________________________________________
 V2.1更新说明：
